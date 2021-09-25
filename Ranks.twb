@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20212.21.0712.0907                               -->
+<workbook original-version='18.1' source-build='2021.2.1 (20212.21.0712.0907)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource inline='true' name='Clipboard_20210821T172502' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Clipboard_20210821T172502' name='Clipboard_20210821T172502leaf'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/salam/Documents/My Tableau Repository/Datasources/Clipboard_20210821T172502.xls' interpretationMode='0' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='Clipboard_20210821T172502leaf' name='Sheet1$' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:B6:no:A1:B6:0' header='yes' outcome='6'>
+            <column datatype='string' name='Stores' ordinal='0' />
+            <column datatype='integer' name='Sales' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='Clipboard_20210821T172502leaf' name='Sheet1$' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:B6:no:A1:B6:0' header='yes' outcome='6'>
+            <column datatype='string' name='Stores' ordinal='0' />
+            <column datatype='integer' name='Sales' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B6:no:A1:B6:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stores</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Stores]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Stores</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Clipboard_20210821T172502]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sales]</local-name>
+            <parent-name>[Sheet1$]</parent-name>
+            <remote-alias>Sales</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Clipboard_20210821T172502]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Rank' datatype='integer' name='[Calculation_605452683747110912]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK(SUM([Sales]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Rankdense' datatype='integer' name='[Calculation_605452683748700161]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_DENSE(SUM([Sales]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='RankModified' datatype='integer' name='[Calculation_605452683749171202]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_MODIFIED(SUM([Sales]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='RankUnique' datatype='integer' name='[Calculation_605452683749470211]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_UNIQUE(SUM([Sales]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Clipboard_20210821T172502' datatype='table' name='[__tableau_internal_object_id__].[Clipboard_20210821T172502]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Clipboard_20210821T172502' id='Clipboard_20210821T172502'>
+            <properties context=''>
+              <relation connection='Clipboard_20210821T172502leaf' name='Sheet1$' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:B6:no:A1:B6:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Stores' ordinal='0' />
+                  <column datatype='integer' name='Sales' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource name='Clipboard_20210821T172502' />
+          </datasources>
+          <datasource-dependencies datasource='Clipboard_20210821T172502'>
+            <column caption='Rank' datatype='integer' name='[Calculation_605452683747110912]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK(SUM([Sales]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Rankdense' datatype='integer' name='[Calculation_605452683748700161]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_DENSE(SUM([Sales]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='RankModified' datatype='integer' name='[Calculation_605452683749171202]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_MODIFIED(SUM([Sales]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='RankUnique' datatype='integer' name='[Calculation_605452683749470211]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_UNIQUE(SUM([Sales]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Stores]' role='dimension' type='nominal' />
+            <column-instance column='[Stores]' derivation='None' name='[none:Stores:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_605452683747110912]' derivation='User' name='[usr:Calculation_605452683747110912:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_605452683748700161]' derivation='User' name='[usr:Calculation_605452683748700161:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_605452683749171202]' derivation='User' name='[usr:Calculation_605452683749171202:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_605452683749470211]' derivation='User' name='[usr:Calculation_605452683749470211:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[Clipboard_20210821T172502].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20210821T172502].[usr:Calculation_605452683747110912:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20210821T172502].[usr:Calculation_605452683749171202:qk:1]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20210821T172502].[usr:Calculation_605452683749470211:qk:1]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20210821T172502].[usr:Calculation_605452683748700161:qk:1]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20210821T172502].[sum:Sales:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[Clipboard_20210821T172502].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[Clipboard_20210821T172502].[:Measure Names]' value='125' />
+            <format attr='text-format' field='[Clipboard_20210821T172502].[usr:Calculation_605452683747110912:qk]' value='N' />
+            <format attr='text-format' field='[Clipboard_20210821T172502].[usr:Calculation_605452683748700161:qk:1]' value='N' />
+            <format attr='text-format' field='[Clipboard_20210821T172502].[usr:Calculation_605452683749171202:qk:1]' value='N' />
+            <format attr='text-format' field='[Clipboard_20210821T172502].[usr:Calculation_605452683749470211:qk:1]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='wrap' field='[Clipboard_20210821T172502].[:Measure Names]' value='on' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[Clipboard_20210821T172502].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[Clipboard_20210821T172502].[none:Stores:nk]</rows>
+        <cols>[Clipboard_20210821T172502].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{535C1A38-4FDE-4DD3-8457-D06C8B679BA5}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{709B889F-C83F-4CF4-9D86-BA66F4302ACC}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='144' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
